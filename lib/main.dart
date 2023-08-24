@@ -68,12 +68,18 @@ class AccountScreen extends ConsumerWidget {
                     ListTile(
                       onTap: null,
                       leading: Checkbox(
-                        value: false,
+                        value: ref.read(listProvider.notifier).getStatus(i.id),
                         onChanged: (value) {
                           ref.read(listProvider.notifier).toggle(i.id);
                         },
                       ),
                       title: Text(i.itemDescription),
+                      trailing: IconButton(
+                        icon: Icon(Icons.done),
+                        onPressed: () {
+                          ref.read(listProvider.notifier).removeItem(i.id);
+                        },
+                      ),
                     ),
                 ],
               ),
@@ -123,19 +129,26 @@ class MyInputItem extends ConsumerWidget {
 
 @immutable
 class EntryItem {
-  const EntryItem({required this.id, required this.itemDescription});
+  const EntryItem(
+      {required this.id, required this.itemDescription, this.status = false});
   // late int index;
   final String id;
   final String itemDescription;
+  final bool status;
   @override
   String toString() {
     return 'EntryItem(description: $itemDescription)';
   }
 
-  EntryItem copyWith({String? id, String? itemDescription}) {
+  bool getStats() {
+    return status;
+  }
+
+  EntryItem copyWith({String? id, String? itemDescription, bool? status}) {
     return EntryItem(
         id: id ?? this.id,
-        itemDescription: itemDescription ?? this.itemDescription);
+        itemDescription: itemDescription ?? this.itemDescription,
+        status: status ?? this.status);
   }
 }
 
@@ -146,17 +159,24 @@ class EntryItemNotifier extends StateNotifier<List<EntryItem>> {
     state = [...state, entryitem];
   }
 
-  void removeItem(int id) {
+  void removeItem(String id) {
     state = [
-      for (final item in state)
-        if (item.id != id) item,
+      for (final todo in state)
+        if (todo.id != id) todo,
     ];
+  }
+
+  bool getStatus(String id) {
+    for (int i = 0; i < state.length; i++) {
+      if (state[i].id == id) return state[i].status;
+    }
+    return false;
   }
 
   void toggle(String id) {
     state = [
       for (final todo in state)
-        if (todo.id != id) todo,
+        if (todo.id != id) todo else todo.copyWith(status: !todo.status),
     ];
   }
 }
