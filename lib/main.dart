@@ -4,6 +4,13 @@ import 'package:riverpod/riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:stack_trace/stack_trace.dart' as stack_trace;
 
+// switchしているのはfilterTodos
+// この中で2つをwatch
+//    final filter = ref.watch(todoListFilter);
+//        これはStateProviderで、all、active、completedのいずれか
+//  final todos = ref.watch(todoListProvider);
+//        これはListのやつ。サンプルは重構造になっているがここではEntryItemNotifierが該当
+
 final itemCount = Provider<int>((ref) {
   return ref.watch(EntryItemNotifier as AlwaysAliveProviderListenable).length;
 });
@@ -52,16 +59,22 @@ class AccountScreen extends ConsumerWidget {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text('プロバイダーお試し'),
-        centerTitle: true,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(50.0),
+        child: AppBar(
+          title: Text('リーバーポッドお試し'),
+          centerTitle: true,
+        ),
       ),
       body: Center(
         child: Column(
           children: [
-            Expanded(flex: 1, child: MyInputItem()),
-            Expanded(
-              flex: 2,
+            // Flexible(flex: 1, child: MyInputItem()),
+            Container(
+              child: MyInputItem(),
+            ),
+            Flexible(
+              // flex: 2,
               child: ListView(
                 children: [
                   for (final i in entries)
@@ -101,7 +114,7 @@ class MyInputItem extends ConsumerWidget {
       child: Form(
         key: formKey,
         child: SizedBox(
-          height: 150,
+          height: 160,
           child: Column(
             children: [
               TextFormField(
@@ -117,7 +130,53 @@ class MyInputItem extends ConsumerWidget {
                   ref.read(listProvider.notifier).addItem(currentItem);
                   formKey.currentState?.reset();
                 },
-                child: const Text('確定'),
+                child: const Text(
+                  '確定',
+                  // style: TextStyle(fontSize: 15),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'ステータス',
+                    style: TextStyle(color: Colors.grey, fontSize: 10),
+                  ),
+                  Text(
+                    'アイテム',
+                    style: TextStyle(color: Colors.grey, fontSize: 10),
+                  ),
+                  SizedBox(
+                    width: 120,
+                  ),
+                  TextButton(
+                    onPressed: null,
+                    child: const Text('全'),
+                    style: TextButton.styleFrom(
+                        textStyle: const TextStyle(
+                      color: Colors.grey,
+                      fontSize: 10,
+                    )),
+                  ),
+                  TextButton(
+                    onPressed: null,
+                    child: const Text('未'),
+                    style: TextButton.styleFrom(
+                        textStyle: const TextStyle(
+                      color: Colors.grey,
+                      fontSize: 10,
+                    )),
+                  ),
+                  TextButton(
+                    onPressed: null,
+                    child: const Text('済'),
+                    style: TextButton.styleFrom(
+                        textStyle: const TextStyle(
+                      color: Colors.grey,
+                      fontSize: 10,
+                    )),
+                  ),
+                ],
               ),
             ],
           ),
