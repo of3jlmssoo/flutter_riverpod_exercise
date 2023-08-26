@@ -4,12 +4,8 @@ import 'package:riverpod/riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:stack_trace/stack_trace.dart' as stack_trace;
 
-// switchしているのはfilterTodos
-// この中で2つをwatch
-//    final filter = ref.watch(todoListFilter);
-//        これはStateProviderで、all、active、completedのいずれか
-//  final todos = ref.watch(todoListProvider);
-//        これはListのやつ。サンプルは重構造になっているがここではEntryItemNotifierが該当
+// todo: try to remove stack_strace
+// todo: immutable warning
 
 final todoListFilter = StateProvider((_) => TodoListFilter.all);
 
@@ -89,7 +85,7 @@ class AccountScreen extends ConsumerWidget {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(50.0),
         child: AppBar(
-          title: Text('リーバーポッドお試し'),
+          title: const Text('リーバーポッドお試し'),
           centerTitle: true,
         ),
       ),
@@ -137,6 +133,8 @@ class MyInputItem extends ConsumerWidget {
   String userinput = '';
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // final textEditingController = useTextEditingController();
+
     final filter = ref.watch(todoListFilter);
 
     Color? textColorFor(TodoListFilter value) {
