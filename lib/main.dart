@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod/riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:stack_trace/stack_trace.dart' as stack_trace;
 
-// todo: try to remove stack_strace
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+// done: try to remove stack_strace
 // todo: immutable warning
 
 final todoListFilter = StateProvider((_) => TodoListFilter.all);
@@ -43,12 +42,6 @@ void main() {
       child: MyApp(),
     ),
   );
-  FlutterError.demangleStackTrace = (StackTrace stack) {
-    if (stack is stack_trace.Trace) return stack.vmTrace;
-    if (stack is stack_trace.Chain) return stack.toTrace().vmTrace;
-    return stack;
-  };
-  // runApp(Provider(child: MyApp()) as Widget);
 }
 
 class MyApp extends StatelessWidget {
