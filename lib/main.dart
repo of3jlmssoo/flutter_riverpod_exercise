@@ -11,6 +11,32 @@ import 'package:stack_trace/stack_trace.dart' as stack_trace;
 //  final todos = ref.watch(todoListProvider);
 //        これはListのやつ。サンプルは重構造になっているがここではEntryItemNotifierが該当
 
+final todoListFilter = StateProvider((_) => TodoListFilter.all);
+
+enum TodoListFilter {
+  all,
+  active,
+  completed,
+}
+
+final filteredTodos = Provider<List<EntryItem>>(
+  (ref) {
+    final filter = ref.watch(todoListFilter);
+    final todos = ref.watch(listProvider);
+
+    // return todos;
+    // return todos.where((todo) => todo.status == false).toList();
+    switch (filter) {
+      case TodoListFilter.completed:
+        return todos.where((todo) => todo.status == true).toList();
+      case TodoListFilter.active:
+        return todos.where((todo) => todo.status == false).toList();
+      case TodoListFilter.all:
+        return todos;
+    }
+  },
+);
+
 final itemCount = Provider<int>((ref) {
   return ref.watch(EntryItemNotifier as AlwaysAliveProviderListenable).length;
 });
@@ -55,7 +81,8 @@ class AccountScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // final item = ref.watch(_currentItem);
     // var item = ref.watch(_currentItem);
-    List<EntryItem> entries = ref.watch(listProvider);
+    // List<EntryItem> entries = ref.watch(listProvider);
+    List<EntryItem> entries = ref.watch(filteredTodos);
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -106,9 +133,11 @@ class AccountScreen extends ConsumerWidget {
 
 class MyInputItem extends ConsumerWidget {
   final formKey = GlobalKey<FormState>();
+
   String userinput = '';
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final filter = ref.watch(todoListFilter);
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
       child: Form(
@@ -138,43 +167,46 @@ class MyInputItem extends ConsumerWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(
+                  const Text(
                     'ステータス',
                     style: TextStyle(color: Colors.grey, fontSize: 10),
                   ),
-                  Text(
+                  const Text(
                     'アイテム',
                     style: TextStyle(color: Colors.grey, fontSize: 10),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 120,
                   ),
                   TextButton(
-                    onPressed: null,
+                    onPressed: () => ref.read(todoListFilter.notifier).state =
+                        TodoListFilter.all,
+                    style: TextButton.styleFrom(
+                        textStyle: const TextStyle(
+                      color: Colors.grey,
+                      fontSize: 10,
+                    )),
                     child: const Text('全'),
+                  ),
+                  TextButton(
+                    onPressed: () => ref.read(todoListFilter.notifier).state =
+                        TodoListFilter.active,
                     style: TextButton.styleFrom(
                         textStyle: const TextStyle(
                       color: Colors.grey,
                       fontSize: 10,
                     )),
-                  ),
-                  TextButton(
-                    onPressed: null,
                     child: const Text('未'),
-                    style: TextButton.styleFrom(
-                        textStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 10,
-                    )),
                   ),
                   TextButton(
-                    onPressed: null,
-                    child: const Text('済'),
+                    onPressed: () => ref.read(todoListFilter.notifier).state =
+                        TodoListFilter.completed,
                     style: TextButton.styleFrom(
                         textStyle: const TextStyle(
                       color: Colors.grey,
                       fontSize: 10,
                     )),
+                    child: const Text('済'),
                   ),
                 ],
               ),
