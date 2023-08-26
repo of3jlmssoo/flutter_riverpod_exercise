@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 // done: try to remove stack_strace
-// todo: immutable warning
+// done: immutable warning : HookConsumerWidget/useTextEditingController
 
 final todoListFilter = StateProvider((_) => TodoListFilter.all);
 
@@ -120,14 +120,16 @@ class AccountScreen extends ConsumerWidget {
   }
 }
 
-class MyInputItem extends ConsumerWidget {
-  final formKey = GlobalKey<FormState>();
+// class MyInputItem extends ConsumerWidget {
+class MyInputItem extends HookConsumerWidget {
+  const MyInputItem({Key? key}) : super(key: key);
+  // const final formKey = GlobalKey<FormState>();
 
-  String userinput = '';
+  // String userinput = '';
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // final textEditingController = useTextEditingController();
-
+    final textEditingController = useTextEditingController();
     final filter = ref.watch(todoListFilter);
 
     Color? textColorFor(TodoListFilter value) {
@@ -137,23 +139,26 @@ class MyInputItem extends ConsumerWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
       child: Form(
-        key: formKey,
+        // key: formKey,
         child: SizedBox(
           height: 160,
           child: Column(
             children: [
               TextFormField(
+                controller: textEditingController,
                 decoration: const InputDecoration(labelText: '入力エリア'),
-                onSaved: (input) => userinput = input!,
+                // onSaved: (input) => userinput = input!,
               ),
               TextButton(
                 onPressed: () {
                   debugPrint('---> TextButton onPressed!');
-                  formKey.currentState!.save();
+                  // formKey.currentState!.save();
                   EntryItem currentItem = EntryItem(
-                      id: UniqueKey().toString(), itemDescription: userinput);
+                      id: UniqueKey().toString(),
+                      itemDescription: textEditingController.text);
                   ref.read(listProvider.notifier).addItem(currentItem);
-                  formKey.currentState?.reset();
+                  // formKey.currentState?.reset();
+                  textEditingController.clear();
                 },
                 child: const Text(
                   '確定',
