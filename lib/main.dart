@@ -138,6 +138,11 @@ class MyInputItem extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final filter = ref.watch(todoListFilter);
+
+    Color? textColorFor(TodoListFilter value) {
+      return filter == value ? Colors.blue : Colors.black;
+    }
+
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
       child: Form(
@@ -181,32 +186,38 @@ class MyInputItem extends ConsumerWidget {
                   TextButton(
                     onPressed: () => ref.read(todoListFilter.notifier).state =
                         TodoListFilter.all,
-                    style: TextButton.styleFrom(
-                        textStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 10,
-                    )),
-                    child: const Text('全'),
+                    style: ButtonStyle(
+                        visualDensity: VisualDensity.compact,
+                        foregroundColor: MaterialStateProperty.all(
+                            textColorFor(TodoListFilter.all))),
+                    child: const Text(
+                      '全',
+                      style: TextStyle(fontSize: 10),
+                    ),
                   ),
                   TextButton(
                     onPressed: () => ref.read(todoListFilter.notifier).state =
                         TodoListFilter.active,
-                    style: TextButton.styleFrom(
-                        textStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 10,
-                    )),
-                    child: const Text('未'),
+                    style: ButtonStyle(
+                        visualDensity: VisualDensity.compact,
+                        foregroundColor: MaterialStateProperty.all(
+                            textColorFor(TodoListFilter.active))),
+                    child: const Text(
+                      '未',
+                      style: TextStyle(fontSize: 10),
+                    ),
                   ),
                   TextButton(
                     onPressed: () => ref.read(todoListFilter.notifier).state =
                         TodoListFilter.completed,
-                    style: TextButton.styleFrom(
-                        textStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 10,
-                    )),
-                    child: const Text('済'),
+                    style: ButtonStyle(
+                        visualDensity: VisualDensity.compact,
+                        foregroundColor: MaterialStateProperty.all(
+                            textColorFor(TodoListFilter.completed))),
+                    child: const Text(
+                      '完',
+                      style: TextStyle(fontSize: 10),
+                    ),
                   ),
                 ],
               ),
