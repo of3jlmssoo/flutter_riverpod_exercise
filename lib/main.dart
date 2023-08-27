@@ -132,6 +132,8 @@ class MyInputItem extends HookConsumerWidget {
     final textEditingController = useTextEditingController();
     final filter = ref.watch(todoListFilter);
 
+    List<EntryItem> entries = ref.watch(filteredTodos);
+
     Color? textColorFor(TodoListFilter value) {
       return filter == value ? Colors.blue : Colors.black;
     }
@@ -172,8 +174,8 @@ class MyInputItem extends HookConsumerWidget {
                     'ステータス',
                     style: TextStyle(color: Colors.grey, fontSize: 10),
                   ),
-                  const Text(
-                    'アイテム',
+                  Text(
+                    'アイテム (${entries.length})',
                     style: TextStyle(color: Colors.grey, fontSize: 10),
                   ),
                   const SizedBox(
