@@ -17,7 +17,7 @@ https://github.com/rrousselGit/riverpod/tree/master/examples/todos
 
 # イメージ
 
-<img src="./Screenshot_20230826.png" >
+<img src="./Screenshot.png" >
 
 ## 未対応
 
