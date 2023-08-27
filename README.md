@@ -17,10 +17,10 @@ https://github.com/rrousselGit/riverpod/tree/master/examples/todos
 
 # イメージ
 
-<img src="./Screenshot.png" >
+<img src="./Screenshot.png" width="300" >
 
 ## 未対応
 
-- アイテム数表示
+- done: アイテム数表示
 - Focus()
 - 削除確認
