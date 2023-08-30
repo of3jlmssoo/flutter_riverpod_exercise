@@ -1,4 +1,4 @@
-## メモ
+## メモ 1
 
 https://github.com/rrousselGit/riverpod/tree/master/examples/todos
 
@@ -200,4 +200,47 @@ bool useIsFocused(FocusNode node) {
 
   return isFocused.value;
 }
+```
+
+## メモ 2
+
+```dart
+final _currentTodo = Provider<Todo>((ref) => throw UnimplementedError());
+
+/// The widget that that displays the components of an individual Todo Item
+class TodoItem extends HookConsumerWidget {
+  const TodoItem({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final todo = ref.watch(_currentTodo);         // 上の_currentTodoをwatchしている
+    final itemFocusNode = useFocusNode();
+      // return MaterialのFocusにセット
+      // フォーカスがあると、textEditingController.text = todo.description;
+      // フォーカスが外れると、editでループで再構築
+    final itemIsFocused = useIsFocused(itemFocusNode);
+      // これで、TextFieldかTextを切り替える
+
+    final textEditingController = useTextEditingController();
+    final textFieldFocusNode = useFocusNode();
+---------------------------------------------------------------------
+        child: ListTile(
+          onTap: () {
+            itemFocusNode.requestFocus();
+            textFieldFocusNode.requestFocus();
+            // requestFocus() x 2
+          },
+          leading: Checkbox(
+            value: todo.completed,
+            onChanged: (value) =>
+                ref.read(todoListProvider.notifier).toggle(todo.id),
+          ),
+          title: itemIsFocused
+              ? TextField(
+                  autofocus: true,
+                  focusNode: textFieldFocusNode,
+                  controller: textEditingController,
+                )
+              : Text(todo.description),
+        ),
 ```

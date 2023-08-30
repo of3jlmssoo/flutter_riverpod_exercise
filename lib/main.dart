@@ -102,28 +102,19 @@ class AccountScreen extends HookConsumerWidget {
             ),
             Flexible(
               // flex: 2,
+
               child: ListView(
                 children: [
-                  for (final i in entries)
-                    ListTile(
-                      onTap: null,
-                      leading: Checkbox(
-                        value: ref.read(listProvider.notifier).getStatus(i.id),
-                        onChanged: (value) {
-                          ref.read(listProvider.notifier).toggle(i.id);
-                        },
-                      ),
-                      title: Text(i.itemDescription),
-                      // title: TextFormField(
-                      //   initialValue: i.itemDescription,
-                      // ),
-                      trailing: IconButton(
-                        icon: Icon(Icons.done),
-                        onPressed: () {
-                          ref.read(listProvider.notifier).removeItem(i.id);
-                        },
-                      ),
+                  // for (final i in entries) ...[
+                  // todo: wrap with Focus
+                  for (var i = 0; i < entries.length; i++) ...[
+                    ProviderScope(
+                      overrides: [
+                        _currentTodo.overrideWithValue(entries[i]),
+                      ],
+                      child: const TodoItem(),
                     ),
+                  ],
                 ],
               ),
             ),
@@ -293,6 +284,24 @@ class EntryItemNotifier extends StateNotifier<List<EntryItem>> {
         if (todo.id != id) todo else todo.copyWith(status: !todo.status),
     ];
   }
+
+  // final String id;
+  // final String itemDescription;
+  // final bool status;
+
+  void edit({required String id, required String description}) {
+    state = [
+      for (final todo in state)
+        if (todo.id == id)
+          EntryItem(
+            id: todo.id,
+            status: todo.status,
+            itemDescription: description,
+          )
+        else
+          todo,
+    ];
+  }
 }
 
 final listProvider = StateNotifierProvider<EntryItemNotifier, List<EntryItem>>(
@@ -317,4 +326,68 @@ bool useIsFocused(FocusNode node) {
   );
 
   return isFocused.value;
+}
+
+class TodoItem extends HookConsumerWidget {
+  const TodoItem({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    List<EntryItem> entries = ref.watch(filteredTodos);
+
+    final todo = ref.watch(_currentTodo);
+    final itemFocusNode = useFocusNode();
+    final itemIsFocused = useIsFocused(itemFocusNode);
+
+    final textEditingController = useTextEditingController();
+    final textFieldFocusNode = useFocusNode();
+
+    return Material(
+      color: Colors.white,
+      elevation: 6,
+      child: Focus(
+        focusNode: itemFocusNode,
+        onFocusChange: (focused) {
+          if (focused) {
+            // textEditingController.text = todo.itemDescription;
+            textEditingController.text = todo.itemDescription;
+          } else {
+            // Commit changes only when the textfield is unfocused, for performance
+            // ref.read(todoListProvider.notifier).edit(
+            ref.read(listProvider.notifier).edit(
+                // id: todo.id,
+                id: todo.id,
+                description: textEditingController.text);
+          }
+        },
+        child: ListTile(
+          onTap: () {
+            itemFocusNode.requestFocus();
+            textFieldFocusNode.requestFocus();
+          },
+          leading: Checkbox(
+            value: ref.read(listProvider.notifier).getStatus(todo.id),
+            onChanged: (value) {
+              ref.read(listProvider.notifier).toggle(todo.id);
+            },
+          ),
+          // title: Text(i.itemDescription),
+          title: itemIsFocused
+              ? TextField(
+                  autofocus: true,
+                  focusNode: textFieldFocusNode,
+                  controller: textEditingController,
+                )
+              : Text(todo.itemDescription),
+
+          trailing: IconButton(
+            icon: Icon(Icons.done),
+            onPressed: () {
+              ref.read(listProvider.notifier).removeItem(todo.id);
+            },
+          ),
+        ),
+      ),
+    );
+  }
 }
