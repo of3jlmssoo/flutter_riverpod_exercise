@@ -63,7 +63,11 @@ class _MainScreenState extends ConsumerWidget {
   }
 }
 
-class AccountScreen extends ConsumerWidget {
+// final _currentTodo = Provider<EntryItem>((ref) => throw UnimplementedError());
+final _currentTodo = Provider<EntryItem>(
+    (ref) => EntryItem(id: 'dummy', itemDescription: 'dummy'));
+
+class AccountScreen extends HookConsumerWidget {
   const AccountScreen({Key? key}) : super(key: key);
 
   @override
@@ -72,6 +76,13 @@ class AccountScreen extends ConsumerWidget {
     // var item = ref.watch(_currentItem);
     // List<EntryItem> entries = ref.watch(listProvider);
     List<EntryItem> entries = ref.watch(filteredTodos);
+
+    final todo = ref.watch(_currentTodo);
+    final itemFocusNode = useFocusNode();
+    final itemIsFocused = useIsFocused(itemFocusNode);
+
+    final textEditingController = useTextEditingController();
+    final textFieldFocusNode = useFocusNode();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -103,6 +114,9 @@ class AccountScreen extends ConsumerWidget {
                         },
                       ),
                       title: Text(i.itemDescription),
+                      // title: TextFormField(
+                      //   initialValue: i.itemDescription,
+                      // ),
                       trailing: IconButton(
                         icon: Icon(Icons.done),
                         onPressed: () {
@@ -286,3 +300,21 @@ final listProvider = StateNotifierProvider<EntryItemNotifier, List<EntryItem>>(
     return EntryItemNotifier();
   },
 );
+
+bool useIsFocused(FocusNode node) {
+  final isFocused = useState(node.hasFocus);
+
+  useEffect(
+    () {
+      void listener() {
+        isFocused.value = node.hasFocus;
+      }
+
+      node.addListener(listener);
+      return () => node.removeListener(listener);
+    },
+    [node],
+  );
+
+  return isFocused.value;
+}
