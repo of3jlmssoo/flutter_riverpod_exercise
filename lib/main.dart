@@ -77,12 +77,15 @@ class AccountScreen extends HookConsumerWidget {
     // List<EntryItem> entries = ref.watch(listProvider);
     List<EntryItem> entries = ref.watch(filteredTodos);
 
-    final todo = ref.watch(_currentTodo);
-    final itemFocusNode = useFocusNode();
-    final itemIsFocused = useIsFocused(itemFocusNode);
-
-    final textEditingController = useTextEditingController();
-    final textFieldFocusNode = useFocusNode();
+    // if defined here and used in this class,
+    // all items share one focus
+    //
+    // final todoX = ref.watch(_currentTodo);
+    // final itemFocusNode = useFocusNode();
+    // final itemIsFocused = useIsFocused(itemFocusNode);
+    //
+    // final textEditingController = useTextEditingController();
+    // final textFieldFocusNode = useFocusNode();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -129,7 +132,6 @@ class AccountScreen extends HookConsumerWidget {
 class MyInputItem extends HookConsumerWidget {
   const MyInputItem({Key? key}) : super(key: key);
   // const final formKey = GlobalKey<FormState>();
-
   // String userinput = '';
 
   @override
@@ -169,7 +171,6 @@ class MyInputItem extends HookConsumerWidget {
                 },
                 child: const Text(
                   '確定',
-                  // style: TextStyle(fontSize: 15),
                 ),
               ),
               Row(
@@ -285,10 +286,6 @@ class EntryItemNotifier extends StateNotifier<List<EntryItem>> {
     ];
   }
 
-  // final String id;
-  // final String itemDescription;
-  // final bool status;
-
   void edit({required String id, required String description}) {
     state = [
       for (final todo in state)
@@ -333,7 +330,9 @@ class TodoItem extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    List<EntryItem> entries = ref.watch(filteredTodos);
+    // this class, TodoItem is required to let each item have its own focusou
+
+    // List<EntryItem> entries = ref.watch(filteredTodos);
 
     final todo = ref.watch(_currentTodo);
     final itemFocusNode = useFocusNode();
@@ -349,15 +348,13 @@ class TodoItem extends HookConsumerWidget {
         focusNode: itemFocusNode,
         onFocusChange: (focused) {
           if (focused) {
-            // textEditingController.text = todo.itemDescription;
             textEditingController.text = todo.itemDescription;
           } else {
             // Commit changes only when the textfield is unfocused, for performance
             // ref.read(todoListProvider.notifier).edit(
-            ref.read(listProvider.notifier).edit(
-                // id: todo.id,
-                id: todo.id,
-                description: textEditingController.text);
+            ref
+                .read(listProvider.notifier)
+                .edit(id: todo.id, description: textEditingController.text);
           }
         },
         child: ListTile(
