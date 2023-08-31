@@ -26,4 +26,5 @@ provider 版の todo を(a)を基に riverpod 化し、その後(b)を参考に 
 - done: アイテム数表示
 - done: Focus()
 - done: 削除確認
-  (b)ではエントリーの削除に Dismissible を利用しているが、代わりに IconButton と showDialog()で削除確認するようにしている。
+  
+(b)ではエントリーの削除に Dismissible を利用しているが、代わりに IconButton と showDialog()で削除確認するようにしている。
