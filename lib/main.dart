@@ -379,9 +379,30 @@ class TodoItem extends HookConsumerWidget {
 
           trailing: IconButton(
             icon: Icon(Icons.done),
-            onPressed: () {
-              ref.read(listProvider.notifier).removeItem(todo.id);
-            },
+            // onPressed: () {
+            //   ref.read(listProvider.notifier).removeItem(todo.id);
+            // },
+            onPressed: () => showDialog<String>(
+              context: context,
+              builder: (BuildContext context) => AlertDialog(
+                title: const Text('削除しますか？'),
+                content: const Text('削除すると戻せません。'),
+                actions: <Widget>[
+                  TextButton(
+                    onPressed: () => Navigator.pop(context, '削除しない'),
+                    child: const Text('削除しない'),
+                  ),
+                  TextButton(
+                    // onPressed: () => Navigator.pop(context, '削除する'),
+                    onPressed: () {
+                      Navigator.pop(context, '削除する');
+                      ref.read(listProvider.notifier).removeItem(todo.id);
+                    },
+                    child: const Text('削除する'),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),
