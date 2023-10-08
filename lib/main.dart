@@ -67,7 +67,7 @@ class _MainScreenState extends ConsumerWidget {
 final _currentTodo = Provider<EntryItem>(
     (ref) => EntryItem(id: 'dummy', itemDescription: 'dummy'));
 
-class AccountScreen extends HookConsumerWidget {
+class AccountScreen extends ConsumerWidget {
   const AccountScreen({Key? key}) : super(key: key);
 
   @override
