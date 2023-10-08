@@ -1,0 +1,51 @@
+
+
+
+void main()
+  ProviderScope(
+    child: MyApp(),
+  ),
+  // All Flutter applications using Riverpod must contain a ProviderScope at the root of their widget tree. It is done as followed:
+
+MyApp(stateless)からの_MainScreenState
+MaterialApp(
+  home: AccountScreen()
+)
+
+class AccountScreen extends HookConsumerWidget {
+
+  // HookConsumerWidget class abstract
+  // A widget that can both use hooks and listen to providers.
+
+  // If you do not need hooks, you can use Consumer.
+
+changed to
+class AccountScreen extends ConsumerWidget {  
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    List<EntryItem> entries = ref.watch(filteredTodos);
+
+  return Scaffold
+    appBar
+    body Center
+          Column
+            Container MyInputItem()
+            ListView
+              children: [
+                  for (var i = 0; i < entries.length; i++) ...[
+                    ProviderScope(
+                      overrides: [
+                        _currentTodo.overrideWithValue(entries[i]),
+                      ],
+                      child: const TodoItem(),
+                    ),
+                  ],
+                ],
+
+  1) check MyInputItem()
+  2) ProviderScope is used again
+
+class MyInputItem extends HookConsumerWidget {
+  // Hook is required because of useTextEditingController
+  
