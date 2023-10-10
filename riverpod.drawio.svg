@@ -1,0 +1,446 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1269px" height="784px" viewBox="-0.5 -0.5 1269 784" content="&lt;mxfile&gt;&lt;diagram id=&quot;4igN5YpVtyQ9Cf5J5bio&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 185 233 L 185 248 Q 185 258 195 258 L 202.5 258 Q 210 258 210 268 L 210 283" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="70" y="193" width="230" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 228px; height: 1px; padding-top: 213px; margin-left: 72px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                todoListFilter =
+                                <br/>
+                                StateProvider((_) =&gt; TodoListFilter.all);
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="72" y="217" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    todoListFilter =...
+                </text>
+            </switch>
+        </g>
+        <path d="M 185 163 L 185 193" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="60" y="123" width="250" height="40" rx="6" ry="6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 248px; height: 1px; padding-top: 143px; margin-left: 62px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                enum TodoListFilter {all,  active,  completed,}
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="62" y="147" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    enum TodoListFilter {all,  active,  compl...
+                </text>
+            </switch>
+        </g>
+        <path d="M 390 358 L 643 358 Q 653 358 653 368 L 653 395 Q 653 405 663 405 L 916 405" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 210 433 L 210 443 Q 210 453 220 453 L 447.55 453 Q 457.55 453 457.54 463 L 457.5 553" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="30" y="283" width="360" height="150" rx="18" ry="18" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 358px; height: 1px; padding-top: 358px; margin-left: 32px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    final filteredTodos = Provider&lt;List&lt;EntryItem&gt;&gt;(
+                                </div>
+                                <div>
+                                    (ref) { final filter = ref.watch(todoListFilter);
+                                </div>
+                                <div>
+                                    final todos = ref.watch(listProvider);
+                                </div>
+                                <div>
+                                    switch (filter) {
+                                </div>
+                                <div>
+                                    case TodoListFilter.completed:
+                                </div>
+                                <div>
+                                    return todos.where((todo) =&gt; todo.status == true).toList();
+                                </div>
+                                <div>
+                                    case TodoListFilter.active:
+                                </div>
+                                <div>
+                                    return todos.where((todo) =&gt; todo.status == false).toList();
+                                </div>
+                                <div>
+                                    case TodoListFilter.all:
+                                </div>
+                                <div>
+                                    return todos;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="32" y="362" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    final filteredTodos = Provider&lt;List&lt;EntryItem&gt;&gt;(...
+                </text>
+            </switch>
+        </g>
+        <path d="M 280 503 L 880 503 Q 890 503 890 513 L 890 530 Q 890 540 900 540 L 908 540 Q 916 540 916 544 L 916 548" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="40" y="473" width="240" height="60" rx="7.2" ry="7.2" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 238px; height: 1px; padding-top: 503px; margin-left: 42px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    final itemCount = Provider&lt;int&gt;((ref) {
+                                </div>
+                                <div>
+                                    return ref.watch(EntryItemNotifier as AlwaysAliveProviderListenable).length;
+                                    <span style="background-color: initial;">
+                                        });
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="42" y="507" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    final itemCount = Provider&lt;int&gt;((ref) {...
+                </text>
+            </switch>
+        </g>
+        <rect x="40" y="573" width="240" height="60" rx="7.2" ry="7.2" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 238px; height: 1px; padding-top: 603px; margin-left: 42px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    class _MainScreenState extends ConsumerWidget {
+                                </div>
+                                <div>
+                                    home: AccountScreen(),}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="42" y="607" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    class _MainScreenState extends ConsumerW...
+                </text>
+            </switch>
+        </g>
+        <path d="M 620 73 L 620 83 Q 620 93 630 93 L 639 93 Q 648 93 648 103 L 648 113" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 740 43 L 810 43 Q 820 43 820 53 L 820 75 Q 820 85 830 85 L 900 85" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="500" y="13" width="240" height="60" rx="7.2" ry="7.2" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 238px; height: 1px; padding-top: 43px; margin-left: 502px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    final _currentTodo = Provider&lt;EntryItem&gt;(
+                                </div>
+                                <div>
+                                    (ref) =&gt; EntryItem(id: 'dummy', itemDescription: 'dummy'));
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="502" y="47" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    final _currentTodo = Provider&lt;EntryItem&gt;...
+                </text>
+            </switch>
+        </g>
+        <path d="M 480 193 L 445 193 Q 435 193 435 203 L 435 310.55 Q 435 320.55 425 320.54 L 390 320.5" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 648 273 L 648 320 Q 648 330 638 330 L 605 330 Q 595 330 595 340 L 595 553" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="480" y="113" width="336" height="160" rx="19.2" ry="19.2" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 334px; height: 1px; padding-top: 193px; margin-left: 482px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    class AccountScreen extends ConsumerWidget {
+                                </div>
+                                <div>
+                                    List&lt;EntryItem&gt; entries = ref.watch(filteredTodos);
+                                </div>
+                                <div>
+                                    return Scaffold(      appBar: PreferredSize(
+                                </div>
+                                <div>
+                                    body: MyInputItem(),
+                                </div>
+                                <div>
+                                    ListView(children: [
+                                </div>
+                                <div>
+                                    for (var i = 0; i &lt; entries.length; i++) ...[
+                                </div>
+                                <div>
+                                    ProviderScope(                      overrides: [
+                                </div>
+                                <div>
+                                    _currentTodo.overrideWithValue(entries[i]),
+                                </div>
+                                <div>
+                                    ],
+                                </div>
+                                <div>
+                                    child: const TodoItem(),
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="482" y="197" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    class AccountScreen extends ConsumerWidget {...
+                </text>
+            </switch>
+        </g>
+        <path d="M 320 668 L 10 668 Q 0 668 0 658 L 0 223 Q 0 213 10 213 L 70 213" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="320" y="553" width="550" height="230" rx="13.8" ry="13.8" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 548px; height: 1px; padding-top: 668px; margin-left: 322px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    class MyInputItem extends HookConsumerWidget {
+                                </div>
+                                <div>
+                                    final textEditingController = useTextEditingController();
+                                </div>
+                                <div>
+                                    final filter = ref.watch(todoListFilter);
+                                </div>
+                                <div>
+                                    List&lt;EntryItem&gt; entries = ref.watch(filteredTodos);
+                                </div>
+                                <div>
+                                    Color? textColorFor(TodoListFilter value) {
+                                </div>
+                                <div>
+                                    return filter == value ? Colors.blue : Colors.black;
+                                </div>
+                                <div>
+                                    }
+                                </div>
+                                <div>
+                                    確定ボタンで ref.read(listProvider.notifier).addItem(currentItem);
+                                </div>
+                                <div>
+                                    アイテム数表示 'アイテム (${entries.length})',
+                                </div>
+                                <div>
+                                    全ボタンで onPressed: () =&gt;
+                                    <span style="background-color: initial;">
+                                        ref.read(todoListFilter.notifier).state = TodoListFilter.all,
+                                    </span>
+                                </div>
+                                <div>
+                                    foregroundColor: MaterialStateProperty.all(textColorFor(TodoListFilter.all))),
+                                </div>
+                                <div>
+                                    未ボタンで onPressed: () =&gt; ref.read(todoListFilter.notifier).state =
+                                </div>
+                                <div>
+                                    foregroundColor: MaterialStateProperty.all(textColorFor(TodoListFilter.active))),
+                                </div>
+                                <div>
+                                    完ボタンで onPressed: () =&gt; ref.read(todoListFilter.notifier).state =
+                                </div>
+                                <div>
+                                    foregroundColor: MaterialStateProperty.all(textColorFor(TodoListFilter.completed))),
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="322" y="672" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    class MyInputItem extends HookConsumerWidget {...
+                </text>
+            </switch>
+        </g>
+        <path d="M 450 38 L 465 38 Q 475 38 475 40.5 L 475 41.75 Q 475 43 485 43 L 500 43" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="40" y="3" width="410" height="70" rx="8.4" ry="8.4" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 408px; height: 1px; padding-top: 38px; margin-left: 42px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    @immutable
+                                </div>
+                                <div>
+                                    class EntryItem {  ...
+                                </div>
+                                <div>
+                                    EntryItem copyWith({String? id, String? itemDescription, bool? status}) {  }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="42" y="42" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    @immutable...
+                </text>
+            </switch>
+        </g>
+        <rect x="916" y="483" width="336" height="130" rx="15.6" ry="15.6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 334px; height: 1px; padding-top: 548px; margin-left: 918px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                <div>
+                                    class EntryItemNotifier extends StateNotifier&lt;List&lt;EntryItem&gt;&gt; {
+                                </div>
+                                <div>
+                                    void addItem(EntryItem entryitem) {
+                                </div>
+                                <div>
+                                    void removeItem(String id) {
+                                </div>
+                                <div>
+                                    bool getStatus(String id) {
+                                </div>
+                                <div>
+                                    void toggle(String id) {
+                                </div>
+                                <div>
+                                    void edit(
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="918" y="552" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    class EntryItemNotifier extends StateNotifier&lt;List&lt;Entry...
+                </text>
+            </switch>
+        </g>
+        <path d="M 1084 445 L 1084 483" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="916" y="365" width="336" height="80" rx="9.6" ry="9.6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 334px; height: 1px; padding-top: 405px; margin-left: 918px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                final listProvider =
+                                <br/>
+                                StateNotifierProvider&gt;(
+                                <br/>
+                                (ref) {    return EntryItemNotifier(); },);
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="918" y="409" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    final listProvider =...
+                </text>
+            </switch>
+        </g>
+        <rect x="900" y="680" width="336" height="30" rx="3.6" ry="3.6" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 334px; height: 1px; padding-top: 695px; margin-left: 902px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                bool useIsFocused(FocusNode node) {}
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="902" y="699" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    bool useIsFocused(FocusNode node) {}
+                </text>
+            </switch>
+        </g>
+        <path d="M 900 170 L 868 170 Q 858 170 858 180 L 858 186.5 Q 858 193 848 193 L 816 193" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1083.55 340 L 1083.55 346.27 Q 1083.55 352.55 1083.77 358.77 L 1084 365" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="900" y="0" width="367" height="340" rx="40.8" ry="40.8" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 365px; height: 1px; padding-top: 170px; margin-left: 902px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                                class TodoItem extends HookConsumerWidget {
+                                <br/>
+                                final todo = ref.watch(_currentTodo);
+                                <br/>
+                                final itemFocusNode = useFocusNode();
+                                <br/>
+                                final itemIsFocused = useIsFocused(itemFocusNode);
+                                <br/>
+                                final textEditingController = useTextEditingController();
+                                <br/>
+                                final textFieldFocusNode = useFocusNode();
+                                <br/>
+                                フォーカスが外れた ref.read(listProvider.notifier)
+                                <br/>
+                                .edit(id: todo.id, description: textEditingController.text);
+                                <br/>
+                                ListTile(
+                                <br/>
+                                leading: Checkbox(
+                                <br/>
+                                value: ref.read(listProvider.notifier).getStatus(todo.id),
+                                <br/>
+                                onChanged: (value) {
+                                <br/>
+                                ref.read(listProvider.notifier).toggle(todo.id);},),
+                                <br/>
+                                title: itemIsFocused
+                                <br/>
+                                ? TextField(
+                                <br/>
+                                autofocus: true,
+                                <br/>
+                                focusNode: textFieldFocusNode,
+                                <br/>
+                                controller: textEditingController,
+                                <br/>
+                                )
+                                <br/>
+                                : Text(todo.itemDescription),
+                                <br/>
+                                削除する時 onPressed: () {
+                                <br/>
+                                ref.read(listProvider.notifier).removeItem(todo.id);
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="902" y="174" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    class TodoItem extends HookConsumerWidget {...
+                </text>
+            </switch>
+        </g>
+        <path d="M 916 425 L 742.55 425 Q 732.55 425 732.54 435 L 732.5 553" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="stroke"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>

@@ -46,3 +46,33 @@ class AccountScreen extends ConsumerWidget {
 class MyInputItem extends HookConsumerWidget {
   // Hook is required because of useTextEditingController
   
+## ref.watch
+final filter = ref.watch(todoListFilter);
+final todos = ref.watch(listProvider);
+return ref.watch(EntryItemNotifier as AlwaysAliveProviderListenable).length;
+List<EntryItem> entries = ref.watch(filteredTodos);
+final filter = ref.watch(todoListFilter);
+List<EntryItem> entries = ref.watch(filteredTodos);
+final todo = ref.watch(_currentTodo);
+
+## ref.watch対象
+todoListFilter x2
+listProvider
+EntryItemNotifier as AlwaysAliveProviderListenable
+filteredTodos x2
+_currentTodo
+
+## ref.watch対象定義
+1. StateProvider
+2. StateNotifier    <= ChangeNotifierとStateNotifierは使われなくなる方向
+3. StateNotifierProvider
+4. Provider
+
+final todoListFilter = StateProvider((_) => TodoListFilter.all);
+
+class EntryItemNotifier extends StateNotifier<List<EntryItem>> {
+
+final listProvider = StateNotifierProvider<EntryItemNotifier, List<EntryItem>>(
+
+final filteredTodos = Provider<List<EntryItem>>(
+final _currentTodo = Provider<EntryItem>(     実質１行

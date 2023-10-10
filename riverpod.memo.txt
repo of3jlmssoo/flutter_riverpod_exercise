@@ -1,0 +1,97 @@
+
+    final todoListFilter = StateProvider((_) => TodoListFilter.all);
+
+    enum TodoListFilter {all,  active,  completed,}
+
+    final filteredTodos = Provider<List<EntryItem>>(
+      (ref) { final filter = ref.watch(todoListFilter);
+              final todos = ref.watch(listProvider);
+        switch (filter) {
+          case TodoListFilter.completed:
+            return todos.where((todo) => todo.status == true).toList();
+          case TodoListFilter.active:
+            return todos.where((todo) => todo.status == false).toList();
+          case TodoListFilter.all:
+            return todos;
+        }  },);
+
+
+    final itemCount = Provider<int>((ref) {
+      return ref.watch(EntryItemNotifier as AlwaysAliveProviderListenable).length;
+    });
+
+
+
+    class _MainScreenState extends ConsumerWidget {
+          home: AccountScreen(),}
+
+    final _currentTodo = Provider<EntryItem>(
+        (ref) => EntryItem(id: 'dummy', itemDescription: 'dummy'));
+
+    class AccountScreen extends ConsumerWidget {
+        List<EntryItem> entries = ref.watch(filteredTodos);
+        return Scaffold(      appBar: PreferredSize(
+          body: MyInputItem(),
+                ListView(children: [
+                      for (var i = 0; i < entries.length; i++) ...[
+                        ProviderScope(                      overrides: [
+                            _currentTodo.overrideWithValue(entries[i]),
+                          ],
+                          child: const TodoItem(),
+                    
+    class MyInputItem extends HookConsumerWidget {
+        final textEditingController = useTextEditingController();
+        final filter = ref.watch(todoListFilter);
+        List<EntryItem> entries = ref.watch(filteredTodos);
+        Color? textColorFor(TodoListFilter value) {
+          return filter == value ? Colors.blue : Colors.black;
+        }
+        確定ボタンで ref.read(listProvider.notifier).addItem(currentItem);
+        アイテム数表示 'アイテム (${entries.length})',
+        全ボタンで onPressed: () => ref.read(todoListFilter.notifier).state = TodoListFilter.all,
+                              foregroundColor: MaterialStateProperty.all(textColorFor(TodoListFilter.all))),
+        未ボタンで onPressed: () => ref.read(todoListFilter.notifier).state =
+                              foregroundColor: MaterialStateProperty.all(textColorFor(TodoListFilter.active))),
+        完ボタンで onPressed: () => ref.read(todoListFilter.notifier).state =
+                              foregroundColor: MaterialStateProperty.all(textColorFor(TodoListFilter.completed))),
+
+    @immutable
+    class EntryItem {  ...
+      EntryItem copyWith({String? id, String? itemDescription, bool? status}) {  }
+    }
+
+    class EntryItemNotifier extends StateNotifier<List<EntryItem>> {
+      void addItem(EntryItem entryitem) {
+      void removeItem(String id) {
+      bool getStatus(String id) {
+      void toggle(String id) {
+      void edit(
+
+final listProvider = 
+StateNotifierProvider<EntryItemNotifier, List<EntryItem>>(
+  (ref) {    return EntryItemNotifier(); },);
+
+bool useIsFocused(FocusNode node) {}
+
+class TodoItem extends HookConsumerWidget {
+    final todo = ref.watch(_currentTodo);
+    final itemFocusNode = useFocusNode();
+    final itemIsFocused = useIsFocused(itemFocusNode);
+    final textEditingController = useTextEditingController();
+    final textFieldFocusNode = useFocusNode();
+    フォーカスが外れた ref.read(listProvider.notifier)
+                .edit(id: todo.id, description: textEditingController.text);
+    ListTile(
+          leading: Checkbox(
+            value: ref.read(listProvider.notifier).getStatus(todo.id),
+            onChanged: (value) {
+              ref.read(listProvider.notifier).toggle(todo.id);},),
+          title: itemIsFocused
+              ? TextField(
+                  autofocus: true,
+                  focusNode: textFieldFocusNode,
+                  controller: textEditingController,
+                )
+              : Text(todo.itemDescription),
+          削除する時 onPressed: () {
+                      ref.read(listProvider.notifier).removeItem(todo.id);
